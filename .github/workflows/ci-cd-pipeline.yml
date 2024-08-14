@@ -16,10 +16,18 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '8.x'
+    - name: List files in root directory
+      run: dir
+    - name: Change to project directory
+      run: cd HelloWorld
+    - name: List files in HelloWorld directory
+      run: dir
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    - name: Verify .NET SDK version
+      run: dotnet --version
 
   test:
     runs-on: windows-latest
@@ -30,6 +38,10 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: '8.x'
+    - name: Change to project directory
+      run: cd HelloWorld
+    - name: List files in HelloWorld directory
+      run: dir
     - name: Run unit tests
       run: dotnet test --no-build --verbosity normal
 
