@@ -37,6 +37,14 @@ jobs:
     steps:
     - name: Deploy to staging
       run: echo "Deploying to staging environment"
+    - name: Notify Success
+      if: success()
+      run: bash ./send-email.sh "your-team@example.com" "Deployment Success" "The deployment was successful. Check the GitHub Actions for more details."
+      env:
+        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+        SMTP_PORT: ${{ secrets.SMTP_PORT }}
+        SMTP_USER: ${{ secrets.SMTP_USER }}
+        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }} 
     - name: Notify Failure
       if: failure()
       run: bash ./send-email.sh "your-team@example.com" "Deployment Failure" "The deployment has failed. Please check the GitHub Actions for more details."
