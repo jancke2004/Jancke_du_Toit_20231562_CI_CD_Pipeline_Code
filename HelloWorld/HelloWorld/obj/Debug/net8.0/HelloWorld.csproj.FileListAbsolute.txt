@@ -1,0 +1,15 @@
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\bin\Debug\net8.0\HelloWorld.exe
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\bin\Debug\net8.0\HelloWorld.deps.json
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\bin\Debug\net8.0\HelloWorld.runtimeconfig.json
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\bin\Debug\net8.0\HelloWorld.dll
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\bin\Debug\net8.0\HelloWorld.pdb
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.GeneratedMSBuildEditorConfig.editorconfig
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfoInputs.cache
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.AssemblyInfo.cs
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.csproj.CoreCompileInputs.cache
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.sourcelink.json
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.dll
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\refint\HelloWorld.dll
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.pdb
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\HelloWorld.genruntimeconfig.cache
+C:\ci-cd-pipelines-fa1-DOE\HelloWorld\HelloWorld\obj\Debug\net8.0\ref\HelloWorld.dll
