@@ -61,8 +61,8 @@ jobs:
       uses: dawidd6/action-send-mail@v2
       with:
         # mail server settings
-        server_address: smtp.gmail.com
-        server_port: 465
+        server_address: ${{ secrets.SMTP_SERVER }}
+        server_port:  ${{ secrets.SMTP_PORT }}
         # user credentials
         username: ${{ secrets.SMTP_USER }}
         password: ${{ secrets.SMTP_PASSWORD }}
@@ -76,18 +76,18 @@ jobs:
         from: Jancke du toit
       
 
-      env:
-        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-        SMTP_PORT: ${{ secrets.SMTP_PORT }}
-        SMTP_USER: ${{ secrets.SMTP_USER }}
-        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      # env:
+      #   SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+      #   SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      #   SMTP_USER: ${{ secrets.SMTP_USER }}
+      #   SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
     - name: Notify Failure
       if: failure()
       uses: dawidd6/action-send-mail@v2
       with:
         # mail server settings
-        server_address: smtp.gmail.com
-        server_port: 465
+        server_address: ${{ secrets.SMTP_SERVER }}
+        server_port: ${{ secrets.SMTP_PORT }}
         # user credentials
         username: ${{ secrets.SMTP_USER }}
         password: ${{ secrets.SMTP_PASSWORD }}
@@ -101,8 +101,8 @@ jobs:
         from: Jancke du toit
 
 
-      env:
-        SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-        SMTP_PORT: ${{ secrets.SMTP_PORT }}
-        SMTP_USER: ${{ secrets.SMTP_USER }}
-        SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      # env:
+      #   SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
+      #   SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      #   SMTP_USER: ${{ secrets.SMTP_USER }}
+      #   SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
