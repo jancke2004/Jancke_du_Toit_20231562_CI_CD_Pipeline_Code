@@ -56,8 +56,8 @@ jobs:
     steps:
     - name: Deploy to staging
       run: echo "Deploying to staging environment"
-    - name: Notify Success
-      if: success()
+    - name: Send mail
+      if: always()
       uses: dawidd6/action-send-mail@v2
       with:
         # mail server settings
@@ -76,33 +76,6 @@ jobs:
         from: Jancke du toit
       
 
-      # env:
-      #   SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-      #   SMTP_PORT: ${{ secrets.SMTP_PORT }}
-      #   SMTP_USER: ${{ secrets.SMTP_USER }}
-      #   SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
-    - name: Notify Failure
-      if: failure()
-      uses: dawidd6/action-send-mail@v2
-      with:
-        # mail server settings
-        server_address: ${{ secrets.SMTP_SERVER }}
-        server_port: ${{ secrets.SMTP_PORT }}
-        # user credentials
-        username: ${{ secrets.SMTP_USER }}
-        password: ${{ secrets.SMTP_PASSWORD }}
-        # email subject
-        subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
-        # email body as text
-        body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
-        # comma-separated string, send email to
-        to: jancke645@gmail.com
-        # from email name
-        from: Jancke du toit
+  
 
-
-      # env:
-      #   SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
-      #   SMTP_PORT: ${{ secrets.SMTP_PORT }}
-      #   SMTP_USER: ${{ secrets.SMTP_USER }}
-      #   SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+    
