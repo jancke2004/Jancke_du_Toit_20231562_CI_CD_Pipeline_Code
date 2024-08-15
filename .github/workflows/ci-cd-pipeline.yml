@@ -58,7 +58,7 @@ jobs:
       run: echo "Deploying to staging environment"
     - name: Notify Success
       if: success()
-      run: bash .github/workflows/.github/scripts/send-email.sh
+      run: bash .github/scripts/send-email.sh
 
       env:
         SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -67,7 +67,8 @@ jobs:
         SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
     - name: Notify Failure
       if: failure()
-      run: bash .github/workflows/.github/scripts/send-email.sh
+      run: bash .github/scripts/send-email.sh
+
 
       env:
         SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
